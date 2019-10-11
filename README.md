@@ -24,15 +24,23 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [1] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+Ans1: React is a JavaScript library for building user interfaces. It makes it easy to create interactive UI in compenent form that are encapsulated. The differnt UI components can then be used together (with any particular component used more than once if necessary) to build a UI. Each instance of a component manages its own state. Also React is fast since it only makes changes to parts of the DOM that have changed due to user input, rather than regenerating the whole DOM due to user input.
 
-- [ ] What does it mean to _think_ in react?
+- [2] What does it mean to _think_ in react?
+Ans 2: In react you have to only think about the differnt states that your UI can be in and you do not have to think about how to transisition from one state to another. In React you just describe the differnt states and React will take care of the steps to perform the transistion.
 
-- [ ] Describe state.
+- [3] Describe state. 
+    Ans3: State is a JavaScript object in React that holds information. It is defined inside a function that is used to create a React element. If its value is to be changed, it must only be done by the accompanying setState function (so for example if the state is represented by the name "count" and the accompanying function to change it is called "setCount", then count must only be change by calling setCount(newValue) and not using any syntax like count=newValue or count++). When the state is changed by calling the setState function, React will respond by calling the function in which the state is defined thereby causing a recreation of the React element inside the function.
 
-- [ ] Describe props.
+- [4] Describe props.
+    Ans 4: Props is an object. It is the parameter of a Javascript function that is used to create a React element. There is only one parameter allowed in a function that creates a React element. It is used as a way to pass information into the function by the means of key value pairs inserted into the props object. A function component (a function that creates a React element and returns it) must not modify its prop parameter inside itself, it must only read it. 
 
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+- [5] What are side effects, and how do you sync effects in a React component to state or prop changes?
+    Ans 5: A "side effect" is anything that affects something inside a function by a change in soemthing that is outside the function. So for example a functional component in React can have a state variable defined and props key-value pairs defined, and these can be changed outside the function but affect the React element generated inside the function. 
+    To make sure that a React element is reconstructed when a change in a state variable ( for example a state variable inside a function set to receive network data from outside the function) is done outside the function, the state variable must be changed by its accompanying setState function and not by any other means. When the state is changed by setState function React will then recreate the Reacte element inside the function in which the state variable and element are defined by calling the function.  
+    React automatically detects changes to a component function's props outside the function and then calls the function to recreate the React element inside the function.
+
 
 ## Project Set Up
 
